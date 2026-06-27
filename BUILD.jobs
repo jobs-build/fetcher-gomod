@@ -1,0 +1,13 @@
+# BUILD.jobs — package the gomod fetcher (a shell script) as a JOBS artifact.
+#
+# gomod is a script fetcher (no compilation), so the "build" just places the
+# fetch script at the output root. It runs in the hermetic sandbox using only the
+# seeded shell. Output: { fetch }, the shape fetcher:gomod expects.
+
+def build():
+    return struct(
+        inputs = {},
+        env = {},
+        script = 'mkdir -p "$out"; cp "$SRC/fetch" "$out/fetch"; chmod +x "$out/fetch"',
+        runtime_deps = [],
+    )
