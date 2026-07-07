@@ -6,6 +6,7 @@
 
 def build():
     return struct(
+        name = "gomod fetcher",
         inputs = {},
         env = {},
         script = 'mkdir -p "$out"; cp "$SRC/fetch" "$out/fetch"; chmod +x "$out/fetch"',
