@@ -1,5 +1,9 @@
 # fetcher-gomod
 
+<p align="center">
+  <img src="docs/assets/jobs-logo.jpg" alt="JOBS — Jonas' Own Build System" width="520">
+</p>
+
 The JOBS **`gomod`** fetcher as a standalone, JOBS-buildable repo.
 
 `gomod` fetches one Go module (path + version) into a `cache/download/...` tree, for
