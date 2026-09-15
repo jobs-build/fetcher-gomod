@@ -12,11 +12,11 @@
 def build():
     goarch = {"linux/amd64": "amd64", "linux/arm64": "arm64"}[platform]
     go_sha = {
-        "amd64": "1153d3d50e0ac764b447adfe05c2bcf08e889d42a02e0fe0259bd47f6733ad7f",
-        "arm64": "ef758ae7c6cf9267c9c0ef080b8965f453d89ab2d25d9eb22de4405925238768",
+        "amd64": "d0f743b33e8d8945e6b1f432edd15785c70507121d6e2a723b21285eddf8b57b",
+        "arm64": "211ffced9dcb9633a55eac6364816ec0ddd951389a740e88fa8b3337971bdda0",
     }
     toolchain = imp(fetcher = "tarball+https", params = {
-        "url": "https://go.dev/dl/go1.26.4.linux-" + goarch + ".tar.gz",
+        "url": "https://go.dev/dl/go1.26.8.linux-" + goarch + ".tar.gz",
         "sha256": go_sha[goarch],
     })
     script = """
